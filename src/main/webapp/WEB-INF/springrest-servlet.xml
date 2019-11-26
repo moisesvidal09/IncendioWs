@@ -7,6 +7,6 @@
 	
 	<mvc:annotation-driven/>
 	
-	<context:component-scan base-package="br.pucgoias.cmp1144.controle"/>
+	<context:component-scan base-package="br.pucgoias.cmp1144"/>
 	
 </beans>

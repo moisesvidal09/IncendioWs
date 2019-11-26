@@ -3,7 +3,6 @@ package br.pucgoias.cmp1144.persistencia;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
 import javax.persistence.PersistenceContext;

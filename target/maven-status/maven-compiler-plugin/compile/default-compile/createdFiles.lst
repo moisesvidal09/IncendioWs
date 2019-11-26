@@ -1,2 +1,9 @@
+br\pucgoias\cmp1144\util\IncendioException.class
+br\pucgoias\cmp1144\persistencia\OcorrenciaDAO.class
+br\pucgoias\cmp1144\negocio\OcorrenciaServiceImpl.class
+br\pucgoias\cmp1144\persistencia\GenericoDAO.class
+br\pucgoias\cmp1144\persistencia\OcorrenciaDAOImpl.class
+br\pucgoias\cmp1144\persistencia\GenericoDAOImpl.class
 br\pucgoias\cmp1144\controle\OcorrenciaController.class
 br\pucgoias\cmp1144\entidade\Ocorrencia.class
+br\pucgoias\cmp1144\negocio\OcorrenciaService.class
