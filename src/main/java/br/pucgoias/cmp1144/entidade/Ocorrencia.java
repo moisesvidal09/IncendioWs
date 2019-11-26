@@ -9,6 +9,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * Entidade que representa uma ocorrencia no sistema
+ * @author moisesvidal.senai
+ *
+ */
 @Entity
 @Table(name = "ocorrencia")
 public class Ocorrencia {
@@ -40,6 +45,9 @@ public class Ocorrencia {
 
 	@Column(name = "areaAtingida")
 	private double areaAtingida;
+
+	@Column(name = "cpf")
+	private String cpf;
 
 	public String getNomeSolicitante() {
 		return nomeSolicitante;
@@ -105,6 +113,14 @@ public class Ocorrencia {
 		this.id = id;
 	}
 
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -113,6 +129,7 @@ public class Ocorrencia {
 		temp = Double.doubleToLongBits(areaAtingida);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + cep;
+		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
 		result = prime * result + ((data == null) ? 0 : data.hashCode());
 		result = prime * result + ((descricao == null) ? 0 : descricao.hashCode());
 		result = prime * result + id;
@@ -134,6 +151,11 @@ public class Ocorrencia {
 		if (Double.doubleToLongBits(areaAtingida) != Double.doubleToLongBits(other.areaAtingida))
 			return false;
 		if (cep != other.cep)
+			return false;
+		if (cpf == null) {
+			if (other.cpf != null)
+				return false;
+		} else if (!cpf.equals(other.cpf))
 			return false;
 		if (data == null) {
 			if (other.data != null)
@@ -160,13 +182,6 @@ public class Ocorrencia {
 		if (numeroViatura != other.numeroViatura)
 			return false;
 		return true;
-	}
-
-	@Override
-	public String toString() {
-		return "Ocorrencia [id=" + id + ", nomeSolicitante=" + nomeSolicitante + ", numeroViatura=" + numeroViatura
-				+ ", cep=" + cep + ", descricao=" + descricao + ", localizacao=" + localizacao + ", data=" + data
-				+ ", areaAtingida=" + areaAtingida + "]";
 	}
 
 }
