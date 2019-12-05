@@ -1,5 +1,6 @@
 package br.pucgoias.cmp1144.entidade;
 
+
 import java.sql.Date;
 
 import javax.persistence.Column;

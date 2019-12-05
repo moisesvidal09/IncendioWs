@@ -72,13 +72,11 @@ public class OcorrenciaController {
 			ocorrencia.setLocalizacao(ocorrenciaJson.getLocalizacao());
 			ocorrencia.setNumeroViatura(ocorrenciaJson.getNumeroViatura());
 
-			// Obter data autal
-			Calendar calendario = Calendar.getInstance();
-			java.sql.Date dataAtual = new java.sql.Date(calendario.getTime().getTime());
-
-			ocorrencia.setData(dataAtual);
+			// Obter data autal  
+			Calendar calendar = Calendar.getInstance();
+			java.sql.Date data = new java.sql.Date(calendar.getTime().getTime());
+			ocorrencia.setData(data);
 			ocorrencia.setAreaAtingida(ocorrenciaJson.getAreaAtingida());
-
 			getOcorrenciaService().incluir(ocorrencia);
 
 			return "Incluido com sucesso";
@@ -179,6 +177,11 @@ public class OcorrenciaController {
 		ocorrencia.setAreaAtingida(ocorrenciaJson.getAreaAtingida());
 		ocorrencia.setCpf(ocorrenciaJson.getCpf());
 
+		Calendar calendar = Calendar.getInstance();
+		java.sql.Date data = new java.sql.Date(calendar.getTime().getTime());
+		ocorrencia.setData(data);
+		
+		
 		getOcorrenciaService().alterar(ocorrencia);
 
 		return "Alterado com sucesso!";
