@@ -18,7 +18,7 @@
 		<spring.version>4.3.7.RELEASE</spring.version>
 		<jdk.version>1.7</jdk.version>
 		<servlet.version>3.1.0</servlet.version>
-		<jackson.version>2.5.0</jackson.version>
+		<jackson.version>2.9.10.3</jackson.version>
 		<xmlbind.version>2.2.7</xmlbind.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
